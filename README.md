@@ -1,1 +1,1 @@
-"# android-activity-test" 
+# android-activity-test
