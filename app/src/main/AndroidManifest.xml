@@ -20,7 +20,8 @@
         <activity android:name=".SecondActivity">
             <intent-filter>
                 <action android:name="com.example.administrator.activitytest.ACTION_START" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.administrator.activitytest.MY_CATEGORY" />
             </intent-filter>
         </activity>
     </application>

@@ -1,6 +1,7 @@
 package com.example.administrator.activitytest;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,7 +22,12 @@ public class FirstActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Toast.makeText(FirstActivity.this, "You clicked button 1", Toast.LENGTH_SHORT).show();
                 // finish();    // 结束活动，返回主界面，相当于按 home 键
-                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                // Intent intent = new Intent(FirstActivity.this, SecondActivity.class); // （显式Intent）启动第二个活动
+                /*Intent intent = new Intent("com.example.administrator.activitytest.ACTION_START"); // （隐式Intent）启动指定活动，活动注册在Manifest中
+                intent.addCategory("com.example.administrator.activitytest.MY_CATEGORY");*/
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
+
                 startActivity(intent);
             }
         });
